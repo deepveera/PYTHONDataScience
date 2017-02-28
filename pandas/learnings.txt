@@ -1,0 +1,22 @@
+import pandas as pd
+pd.Series?
+pd.Series
+animal = ["cat","dog","me"]
+pd.Series(animal)
+animal = ["cat","dog",None]
+pd.Series(animal)
+animal = ["cat","dog",]
+pd.Series(animal)
+sports {'Cricket':'India','Football','Germany','Hockey':'Australia'}
+sports = {'Cricket':'India','Football','Germany','Hockey':'Australia'}
+sports = {'Cricket':'India','Football':'Germany','Hockey':'Australia'}
+pd.Series(sports)
+a = pd.Series(sports)
+a.argmax
+a.count
+a
+a.index
+a=pd.Series(sports, index=['cricket','Hockey','Atlete'])
+a
+a=pd.Series(sports, index=['Cricket','Hockey','Atlete'])
+a
