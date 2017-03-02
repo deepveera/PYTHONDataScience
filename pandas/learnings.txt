@@ -20,3 +20,49 @@ a=pd.Series(sports, index=['cricket','Hockey','Atlete'])
 a
 a=pd.Series(sports, index=['Cricket','Hockey','Atlete'])
 a
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********************************************************************************************
+DATA FRAMEWORK - updating a column
+
+purchase_1 = pd.Series({'Name': 'Chris',
+                        'Item Purchased': 'Dog Food',
+                        'Cost': 22.50})
+purchase_2 = pd.Series({'Name': 'Kevyn',
+                        'Item Purchased': 'Kitty Litter',
+                        'Cost': 2.50})
+purchase_3 = pd.Series({'Name': 'Vinod',
+                        'Item Purchased': 'Bird Seed',
+                        'Cost': 5.00})
+
+
+df = pd.DataFrame([purchase_1, purchase_2, purchase_3], index=['Store 1', 'Store 1', 'Store 2'])
+
+df
+Out[119]: 
+         Cost Item Purchased   Name
+Store 1  22.5       Dog Food  Chris
+Store 1   2.5   Kitty Litter  Kevyn
+Store 2   5.0      Bird Seed  Vinod
+
+df ['Cost'] = df ['Cost'].apply(lambda x:x*.8)
+OR
+df['Cost'] = df['Cost']*.8
+
+df
+Out[121]: 
+         Cost Item Purchased   Name
+Store 1  18.0       Dog Food  Chris
+Store 1   2.0   Kitty Litter  Kevyn
+Store 2   4.0      Bird Seed  Vinod
